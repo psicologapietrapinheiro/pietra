@@ -123,6 +123,15 @@
             margin-bottom: 1.5rem;
         }
 
+        .hero-content .credencial {
+            font-size: 1rem;
+            color: var(--texto-medio);
+            font-weight: 600;
+            margin-top: -0.8rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.3px;
+        }
+
         .hero-content .subtitle {
             font-size: 1.4rem;
             color: var(--rosa);
@@ -579,7 +588,7 @@
     <nav>
         <div class="container">
             <div class="logo">
-                <img src="headlogo.png" alt="Pietra Pinheiro Psicóloga">
+                <img src="img-lateralsup.png" alt="Pietra Pinheiro Psicóloga">
             </div>
             <ul>
                 <li><a href="#inicio">Início</a></li>
@@ -594,6 +603,7 @@
     <section class="hero" id="inicio">
         <div class="hero-content">
             <h1>Entenda sua mente. Transforme sua vida.</h1>
+            <p class="credencial">Psicóloga Clínica | CRP 06/215556</p>
             <p class="subtitle">Terapia Cognitivo-Comportamental</p>
             <p>Ajudo você a compreender e transformar pensamentos, emoções e comportamentos através da TCC, uma abordagem baseada em evidências científicas.</p>
             <div class="hero-buttons">
@@ -704,7 +714,7 @@
                 </div>
 
                 <div class="foto-sec-1">
-                    <img src="gamoraegaia.png"" alt="Gamora e Gaia">
+                    <img src="gamoraegaia.png" alt="Gamora e Gaia">
                 </div>
 
                 <div class="foto-sec-2">
@@ -788,4 +798,11 @@
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        document
+        document.querySelectorAll('.ajuda-card, .transtorno-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
