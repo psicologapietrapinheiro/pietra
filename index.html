@@ -521,6 +521,7 @@
             padding: 5rem 5%;
             margin: 4rem 0 0 0;
             width: 100%;
+            max-width: none;
             display: block;
         }
 
@@ -557,10 +558,14 @@
 
 
         @media (max-width: 968px) {
-            nav .container { flex-wrap: wrap; }
-            nav .logo { height: 90px; }
+            nav { padding: 0.8rem 4%; }
+            nav .container { flex-wrap: nowrap; gap: 0.6rem; }
+            nav .logo { height: 50px; min-width: 0; }
+            nav .logo img { max-width: 100%; }
 
-            .hamburger { display: flex; }
+            .hamburger { display: flex; width: 26px; height: 26px; }
+
+            .nav-actions { gap: 0.5rem; }
 
             nav ul.nav-links {
                 display: none;
@@ -588,12 +593,12 @@
             }
 
             .btn-contato-nav {
-                padding: 0.55rem 1.1rem;
-                font-size: 0.85rem;
+                padding: 0.5rem 0.9rem;
+                font-size: 0.78rem;
             }
 
             .hero {
-                margin-top: 130px;
+                margin-top: 90px;
                 grid-template-columns: 1fr;
                 text-align: center;
                 padding: 3rem 5%;
@@ -618,9 +623,13 @@
         }
 
         @media (max-width: 640px) {
-            nav .logo { height: 80px; }
-            .btn-contato-nav { padding: 0.5rem 0.9rem; font-size: 0.78rem; }
-            .hero { margin-top: 108px; }
+            nav { padding: 0.6rem 4%; }
+            nav .logo { height: 40px; }
+            nav .container { gap: 0.4rem; }
+            .nav-actions { gap: 0.4rem; }
+            .btn-contato-nav { padding: 0.4rem 0.7rem; font-size: 0.68rem; }
+            .hamburger { width: 22px; height: 22px; gap: 4px; }
+            .hero { margin-top: 68px; }
             .hero-image img { height: 300px; }
             .hero-content h1 { font-size: 2.5rem; }
             .hero-content .subtitle { font-size: 1.2rem; }
